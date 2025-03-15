@@ -20,12 +20,10 @@
         @endif
     </head>
     <body>
-        <nav class="fixed top-0 w-full bg-gray-200 p-4 flex justify-between shadow">
-          <div class="font-semibold">Test Nav</div>
+        <nav class="fixed top-0 w-full  p-4 flex justify-between ">
+          <div class="font-semibold uppercase text-lg">Simulador de tráfico/semáforos</div>
           <ul class="flex space-x-4">
-            <li><a href="#" class="hover:underline">Link A</a></li>
-            <li><a href="#" class="hover:underline">Link B</a></li>
-            <li><a href="#" class="hover:underline">Link C</a></li>
+            {{-- <li><a href={{route('show.login')}} class="btn-ghost">Iniciar sesión</a></li> --}}
           </ul>
         </nav>
         <div class="pt-16 text-center">
