@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@layer components {
+    .btn-primary {
+        @apply font-medium transition rounded-md border border-[#f09760] bg-[#F5C09E] px-3 py-1.5 hover:bg-[#f5ccb2];
+    }
+
+    .btn-outline {
+        @apply font-medium transition rounded-md border border-[#EFC2A3] bg-black px-3 py-1.5 text-[#F5C0A1] hover:border-[#ecd9ca] hover:text-[#ecd9ca];
+    }
+
+    .btn-ghost {
+        @apply font-medium transition rounded-md border border-transparent hover:border-[#221E1D] text-[#221E1D] px-3 py-1.5 hover:bg-[#fcded775];
+    }
+
+    .btn-destructive {
+        @apply font-medium transition rounded-md border border-[#211215] bg-[#150F11] px-3 py-1.5 text-[#DE564C] hover:text-[#ff847b];
+    }
+
+    .btn-secondary {
+        @apply font-medium transition rounded-sm border border-[#525252] bg-[#404040] px-3 py-1.5 text-white;
+    }
+
+    .btn-warn {
+        @apply font-medium transition rounded-sm border border-[#C38E32] bg-[#996522] px-3 py-1.5 text-white;
+    }
+}
+
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
