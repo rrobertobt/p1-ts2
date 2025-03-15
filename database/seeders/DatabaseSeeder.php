@@ -59,5 +59,12 @@ class DatabaseSeeder extends Seeder
             'password' => 'password',
             'role_id' => 2,
         ]);
+        User::factory()->create([
+            'name' => 'Monitor Inactivo',
+            'email' => 'rsupin@muni.gt',
+            'password' => 'password',
+            'role_id' => 1,
+            'is_active' => false,
+        ]);
     }
 }

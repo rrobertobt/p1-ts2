@@ -56,7 +56,7 @@
                             aria-current="page">Inicio</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="{{ route('admin.users.index') }}"
                             class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Usuarios</a>
                     </li>
                     <li>

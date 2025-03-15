@@ -16,7 +16,11 @@ class AuthController extends Controller
   public function login(Request $request)
   {
     $credentials = $request->only('email', 'password');
-    if (Auth::attempt($credentials)) {
+    if (Auth::attempt([
+      'email' => $credentials['email'],
+      'password' => $credentials['password'],
+      'is_active' => true
+    ])) {
       $request->session()->regenerate();
 
       
@@ -42,7 +46,7 @@ class AuthController extends Controller
 
       return redirect()->route('login');
     }
-    return redirect('login')->with('error', 'Parece que las credenciales no son correctas, por favor intenta de nuevo.');
+    return redirect('login')->with('error', 'Parece que las credenciales no son correctas o este usuario esta bloqueado, intenta de nuevo.');
   }
 
   public function logout(Request $request)
