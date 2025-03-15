@@ -13,8 +13,9 @@ class UsersSeeder extends Seeder
      */
     public function run(): void
     {
-        UserFactory::new()->createMany([
+        // UserFactory::new()->createMany([
           
-        ])
+        // ])
+        // $this->call(RoleSeeder::class);
     }
 }

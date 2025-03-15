@@ -26,7 +26,7 @@
         <div class=" flex flex-wrap items-center justify-between py-4 px-8">
             <h2 class="text-xl font-semibold text-gray-900 dark:"> <x-lucide-route
                     class="text-primary size-6 mb-1 mr-2 inline-block" />
-                Simulador - Supervisor</h2>
+                Simulador - Administrador</h2>
             <div class="flex items-center md:order-2 space-x-3">
                 @auth
                     <span class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
@@ -57,7 +57,11 @@
                     </li>
                     <li>
                         <a href="#"
-                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Reportes</a>
+                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Usuarios</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Calles/Avenidas/Semaforos</a>
                     </li>
                 </ul>
             </div>

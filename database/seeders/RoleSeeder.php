@@ -25,6 +25,11 @@ class RoleSeeder extends Seeder
           'name' => 'Supervisor',
           'description' => 'Usuario que puede ver las simulaciones de los monitores y generar reportes'
         ],
+        [
+          'id' => 3,
+          'name' => 'Administrador',
+          'description' => 'Usuario que puede manejar usuarios y roles y administrar calles'
+        ],
       ]
     );
   }
