@@ -1,6 +1,7 @@
 <x-empty>
   <main class="flex items-center justify-center">
     <h1 class="text-2xl font-bold text-center">Iniciar sesión</h1>
+    <x-lucide-user />
     <p>
       Ingresa tus credenciales para acceder al sistema.
     </p>
