@@ -11,11 +11,7 @@ return new class extends Migration
    */
   public function up(): void
   {
-    Schema::create('interseccion', function (Blueprint $table) {
-      $table->id();
-      $table->string('nombre');
-      $table->timestamps();
-    });
+    
 
     Schema::create('tipo_sentido', function (Blueprint $table) {
       $table->id();
@@ -35,6 +31,18 @@ return new class extends Migration
       $table->string('nombre')->unique();
       $table->string('numero')->nullable();
       $table->timestamps();
+    });
+
+    Schema::create('interseccion', function (Blueprint $table) {
+      $table->id();
+      $table->string('nombre');
+      $table->timestamps();
+      $table->foreignId('id_bloque_vertical')
+        ->constrained('bloque')
+        ->onDelete('cascade');
+      $table->foreignId('id_bloque_horizontal')
+        ->constrained('bloque')
+        ->onDelete('cascade');
     });
 
     Schema::create('bloque_interseccion', function (Blueprint $table) {

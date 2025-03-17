@@ -4,7 +4,7 @@
     </h1>
 
     <div class="flex my-4">
-      <a href="{{ route('dashboard.admin.blocks.create') }}" class="btn-outline">
+      <a href="{{ route('dashboard.admin.intersections.create') }}" class="btn-outline">
           <x-lucide-plus class="size-4 mb-1 mr-1 inline-block" />
           Crear intersección
       </a>

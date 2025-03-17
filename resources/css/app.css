@@ -48,4 +48,8 @@
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+
+    body {
+        @apply selection:bg-[#f09760] selection:text-white;
+    }
 }

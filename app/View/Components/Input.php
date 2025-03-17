@@ -13,6 +13,7 @@ class Input extends Component
    */
   public function __construct(
     public string $label,
+    public string $rootClass = '',
   ) {}
 
   /**

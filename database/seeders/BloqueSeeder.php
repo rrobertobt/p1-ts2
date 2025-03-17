@@ -59,41 +59,49 @@ class BloqueSeeder extends Seeder
 
     BloqueFactory::new()->createMany([
       [
-        'id' => 1,
         'nombre' => '7 Calle',
         'numero' => '7',
         'id_tipo' => 1,
       ],
       [
-        'id' => 2,
         'nombre' => '10 Avenida',
         'numero' => '10',
         'id_tipo' => 2,
       ],
       // ...
       [
-        'id' => 3,
         'nombre' => '9 Calle',
         'numero' => '9',
         'id_tipo' => 1,
       ],
       [
-        'id' => 4,
         'nombre' => 'Calzada San Juan',
         'numero' => null,
         'id_tipo' => 4,
-      ]
+      ],
+      [
+        'nombre' => 'Calzada independencia',
+        'numero' => null,
+        'id_tipo' => 4,
+      ],
+      [
+        'nombre' => 'Diagonal 18',
+        'numero' => '18',
+        'id_tipo' => 3,
+      ],
     ]);
 
     // Crear 2 intersecciones
     InterseccionFactory::new()->createMany([
       [
-        'id' => 1,
         'nombre' => '7 Calle y 10 Avenida',
+        'id_bloque_vertical' => 1,
+        'id_bloque_horizontal' => 2,
       ],
       [
-        'id' => 2,
         'nombre' => '9 Calle y Calzada San Juan',
+        'id_bloque_vertical' => 3,
+        'id_bloque_horizontal' => 4,
       ],
     ]);
 

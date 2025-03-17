@@ -1,4 +1,4 @@
-<label class="block mb-4 text-sm font-medium text-gray-900 ">
+<label class="{{ "block mb-4 text-sm font-medium text-gray-900 " . $rootClass }}">
     {{ $label }}
 
     <div class="relative mt-1">
