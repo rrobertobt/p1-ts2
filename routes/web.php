@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BloquesController;
 use App\Http\Controllers\InterseccionesController;
+use App\Http\Controllers\SimulacionesController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,9 @@ Route::middleware('auth')->group(function () {
   Route::get('/monitor/home', function () {
     return view('dashboard.monitor.home');
   })->name('monitor.home');
+  Route::get('/monitor/simulacion', [
+    SimulacionesController::class, 'simulacion'
+  ])->name('monitor.simulacion');
 
 
 

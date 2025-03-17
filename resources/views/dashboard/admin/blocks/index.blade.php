@@ -16,7 +16,6 @@
                 <th class="px-4 py-4 text-center border border-neutral-200">ID</th>
                 <th class="px-4 py-4 text-center border border-neutral-200">Nombre</th>
                 <th class="px-4 py-4 text-center border border-neutral-200">Tipo de bloque</th>
-                <th class="px-4 py-4 text-center border border-neutral-200">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -25,17 +24,6 @@
                     <td class="border border-neutral-200 px-4 py-2 text-center">{{ $bloque->id }}</td>
                     <td class="border border-neutral-200 px-4 py-2">{{ $bloque->nombre }}</td>
                     <td class="border border-neutral-200 px-4 py-2">{{ $bloque->tipo_bloque->nombre }}</td>
-                    <td class="border border-neutral-200 px-4 py-2 text-center w-1/5">
-                        {{-- <form action="{{ route('admin.users.destroy', $bloque) }}" method="POST" class="inline"> --}}
-                        <form action="{{ route('admin.users.destroy', $bloque) }}" class="inline">
-                            @csrf
-                            <button type="submit" class="btn-secondary">
-                                <x-lucide-info class="size-4 mb-1 mr-1 inline-block" />
-                                Ver detalles
-                            </button>
-                        </form>
-
-                    </td>
                 </tr>
             @endforeach
         </tbody>

@@ -25,7 +25,6 @@ class UsersController extends Controller
 
   public function store(Request $request)
   {
-    error_log("store");
     $request->validate([
       'name' => 'required',
       'email' => 'required|email|unique:users,email',

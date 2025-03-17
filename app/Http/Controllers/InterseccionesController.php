@@ -32,7 +32,6 @@ class InterseccionesController extends Controller
 
   public function guardar(Request $request)
   {
-    error_log(json_encode($request->all()));
 
     if ($request->vertical_block == $request->horizontal_block) {
       throw ValidationException::withMessages(['error' => 'Los bloques no pueden ser iguales']);
@@ -47,7 +46,6 @@ class InterseccionesController extends Controller
       throw ValidationException::withMessages(['error' => 'Los bloques no pueden ser del mismo tipo']);
     }
 
-    // check if the intersection already exists with id_bloque_vertical and id_bloque_horizontal
     $exists = Interseccion::where('id_bloque_vertical', $request->vertical_block)
       ->where('id_bloque_horizontal', $request->horizontal_block)
       ->exists();
@@ -100,14 +98,6 @@ class InterseccionesController extends Controller
   {
     $interseccion = Interseccion::with(['bloques.tipo_bloque'])->find($id);
 
-    // error_log("log: $interseccion->bloques");
-    foreach ($interseccion->bloques as $bloque) {
-      error_log($bloque->nombre);
-    }
-    foreach ($interseccion->bloques as $bloque) {
-      error_log($bloque->pivot->tipo_sentido);
-    }
-    // error_log("log: $interseccion");
 
     return view('dashboard.admin.intersections.detail', ['interseccion' => $interseccion]);
   }
