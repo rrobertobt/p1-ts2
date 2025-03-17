@@ -1527,7 +1527,7 @@
     {{-- </ul>
         </nav> --}}
     @if (session('message'))
-        <div class="fixed w-full bg-green-500 text-white p-4 text-center">
+        <div class="fixed w-full bg-primary text-white p-4 text-center">
             {{ session('message') }}
         </div>
     @endif

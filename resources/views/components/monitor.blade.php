@@ -20,7 +20,16 @@
 </head>
 
 <body>
-
+    @if (session('message'))
+        <div class="fixed w-full bg-primary text-white p-4 text-center top-18">
+            {{ session('message') }}
+        </div>
+    @endif
+    @if (session('error'))
+        <div class="fixed w-full bg-red-500 text-white p-4 text-center top-18">
+            {{ session('error') }}
+        </div>
+    @endif
 
     <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full">
         <div class=" flex flex-wrap items-center justify-between py-4 px-8">
@@ -42,7 +51,8 @@
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                         data-dropdown-placement="bottom">
                         <x-lucide-user class="size-6 group-hover:opacity-0 text-white transition" />
-                        <x-lucide-log-out class="size-5.5
+                        <x-lucide-log-out
+                            class="size-5.5
                          group-hover:opacity-100 opacity-0 text-white absolute transition" />
                     </button>
                 </form>
@@ -64,7 +74,10 @@
         </div>
     </nav>
 
-    <div class="pt-20 px-18">
+    <div @class([
+        'pt-34' => session('message') || session('error'),
+        'pt-18 px-18' => true,
+    ])>
         {{ $slot }}
     </div>
 

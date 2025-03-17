@@ -15,8 +15,11 @@
 }
 
 @layer components {
+    .btn-icon {
+      @apply inline-block mr-1 mb-1 size-4;
+    }
     .btn-primary {
-        @apply font-medium transition rounded-md border border-[#f09760] bg-[#F5C09E] px-3 py-1.5 hover:bg-[#f5ccb2];
+        @apply font-medium transition rounded-md border border-[#f09760] bg-[#F5C09E] px-3 py-1.5 hover:bg-[#f5ccb2] text-[#221E1D];
     }
 
     .btn-outline {
