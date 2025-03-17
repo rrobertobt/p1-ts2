@@ -1,6 +1,6 @@
 <x-admin>
     <h1 class="text-2xl my-3 font-bold text-center">
-        Todos los usuarios
+        Manejo de usuarios
     </h1>
 
     <div class="flex my-4">
@@ -10,32 +10,32 @@
         </a>
     </div>
 
-    <table class="w-full max-w-screen-lg mx-auto  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full   text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-sm  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th class="px-4 py-4 text-center border border-neutral-200">ID</th>
                 <th class="px-4 py-4 text-center border border-neutral-200">Nombre</th>
                 <th class="px-4 py-4 text-center border border-neutral-200">Correo</th>
                 <th class="px-4 py-4 text-center border border-neutral-200">Rol</th>
-                <th class="px-4 py-4 text-center border border-neutral-200">Activo</th>
+                <th class="px-4 py-4 text-center border border-neutral-200">Estado</th>
                 <th class="px-4 py-4 text-center border border-neutral-200">Acciones</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($users as $user)
-                <tr>
-                    <td class="border border-neutral-200 px-4 py-2">{{ $user->id }}</td>
+                <tr class="hover:bg-zinc-100">
+                    <td class="border border-neutral-200 px-4 py-2 text-center">{{ $user->id }}</td>
                     <td class="border border-neutral-200 px-4 py-2">{{ $user->name }}</td>
                     <td class="border border-neutral-200 px-4 py-2">{{ $user->email }}</td>
                     <td class="border border-neutral-200 px-4 py-2">{{ $user->role->name }}</td>
                     <td class="border border-neutral-200 px-4 py-2 text-center">
                         @if ($user->is_active)
                             <span
-                                class="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-green-800 bg-green-100 rounded-sm  dark:text-green-300 
+                                class="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-green-800 bg-green-100 rounded 
               ">Activo</span>
                         @else
                             <span
-                                class="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-red-800 bg-red-100 rounded-sm dark:bg-red-900 
+                                class="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-red-800 bg-red-100 rounded
               ">Inactivo</span>
                         @endif
                     </td>

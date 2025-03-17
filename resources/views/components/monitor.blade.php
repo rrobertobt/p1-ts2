@@ -21,7 +21,7 @@
 
 <body>
     @if (session('message'))
-        <div class="fixed w-full bg-primary text-white p-4 text-center top-18">
+        <div class="fixed w-full bg-rose-400 text-white p-4 text-center top-18">
             {{ session('message') }}
         </div>
     @endif
@@ -30,11 +30,10 @@
             {{ session('error') }}
         </div>
     @endif
-
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full">
-        <div class=" flex flex-wrap items-center justify-between py-4 px-8">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0  w-full">
+      <div class=" flex flex-wrap items-center justify-between py-4 px-8 max-w-screen-2xl mx-auto">
             <h2 class="text-xl font-semibold text-gray-900 dark:"> <x-lucide-route
-                    class="text-primary size-6 mb-1 mr-2 inline-block" />
+                    class="text-rose-500 size-6 mb-1 mr-2 inline-block" />
                 Simulador - Monitor</h2>
             <div class="flex items-center md:order-2 space-x-3">
                 @auth
@@ -62,12 +61,12 @@
                     class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
                         <a href="#"
-                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3    md:bg-transparent  "
+                            class="hover:text-rose-500 transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3    md:bg-transparent  "
                             aria-current="page">Inicio</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Simulación</a>
+                            class="hover:text-rose-500 transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Simulación</a>
                     </li>
                 </ul>
             </div>
@@ -76,7 +75,7 @@
 
     <div @class([
         'pt-34' => session('message') || session('error'),
-        'pt-18 px-18' => true,
+        'pt-20 px-18 max-w-screen-xl mx-auto' => true,
     ])>
         {{ $slot }}
     </div>

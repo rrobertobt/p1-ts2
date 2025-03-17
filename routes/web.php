@@ -17,7 +17,7 @@ Route::middleware('auth')->group(function () {
   //Admin routes
   Route::get('/admin/home', function () {
     return view('dashboard.admin.home');
-  })->name('admin.home');
+  })->name('dashboard.admin.home');
   Route::get('/admin/users', [UsersController::class, 'index'])->name('dashboard.admin.users.index');
   Route::get('/admin/users/create', [UsersController::class, 'create'])->name('dashboard.admin.users.create');
   Route::post('/admin/users', [UsersController::class, 'store'])->name('admin.users.store');
