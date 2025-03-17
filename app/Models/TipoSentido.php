@@ -11,4 +11,9 @@ class TipoSentido extends Model
     use HasFactory;
 
     protected $table = 'tipo_sentido';
+
+    public function bloqueIntersecciones()
+    {
+      return $this->hasMany(BloqueInterseccion::class, 'id_tipo_sentido');
+    }
 }

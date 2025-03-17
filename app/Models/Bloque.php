@@ -16,4 +16,13 @@ class Bloque extends Model
     {
         return $this->belongsTo(TipoBloque::class, 'id_tipo');
     }
+
+    public function intersecciones()
+    {
+        // return $this->belongsToMany(Interseccion::class, 'bloque_interseccion', 'id_bloque', 'id_interseccion')
+        //             ->withPivot('id_tipo_sentido');  
+        return $this->belongsToMany(Interseccion::class, 'bloque_interseccion', 'id_bloque', 'id_interseccion')
+                    ->using(BloqueInterseccion::class)
+                    ->withPivot(['id_tipo_sentido']);  
+    }
 }

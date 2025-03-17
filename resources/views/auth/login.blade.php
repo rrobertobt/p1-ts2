@@ -6,7 +6,7 @@
             <div class="flex items-center justify-center mb-5">
                 <x-lucide-route class="text-primary size-8" />
             </div>
-            <h1 class="text-2xl my-3 font-bold text-center">
+            <h1 class="text-2xl my-3 font-bold">
                 Simulador de tráfico/semáforos
             </h1>
 

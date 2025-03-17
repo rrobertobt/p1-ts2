@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
   Route::post('/admin/bloques', [BloquesController::class, 'guardar'])->name('dashboard.admin.blocks.store');
   Route::get('/admin/bloques/crear', [BloquesController::class, 'crear'])->name('dashboard.admin.blocks.create');
   Route::get('/admin/intersecciones', [InterseccionesController::class, 'index'])->name('dashboard.admin.intersections.index');
+  Route::get('/admin/intersecciones/{id}', [InterseccionesController::class, 'detalle'])->name('dashboard.admin.intersections.detail');
+  Route::get('/admin/intersecciones/crear', [InterseccionesController::class, 'crear'])->name('dashboard.admin.intersections.create');
 
 
   //Monitor routes

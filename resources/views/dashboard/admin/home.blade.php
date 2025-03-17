@@ -1,5 +1,5 @@
 <x-admin>
-    <h1 class="text-2xl my-3 font-bold text-center">
+    <h1 class="text-2xl my-3 font-bold">
         Inicio
     </h1>
 
