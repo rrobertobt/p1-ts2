@@ -70,8 +70,12 @@
                             class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Usuarios</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Calles/Avenidas/Semaforos</a>
+                        <a href="{{ route('dashboard.admin.blocks.index') }}"
+                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Calles y Avenidas</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dashboard.admin.intersections.index') }}"
+                            class="hover:text-primary transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Intersecciones</a>
                     </li>
                 </ul>
             </div>

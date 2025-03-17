@@ -31,7 +31,7 @@ class AuthController extends Controller
 
       switch ($roleSlug) {
         case 'admin':
-          return redirect()->route('admin.home');
+          return redirect()->route('dashboard.admin.home');
           break;
         case 'monitor':
           return redirect()->route('monitor.home');

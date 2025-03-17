@@ -40,7 +40,7 @@ class UsersController extends Controller
     $user->role_id = $request->role_id;
     $user->save();
 
-    return redirect()->route('dashboard.admin.users.index')->with('message', 'Usuario ha sido creado');
+    return redirect()->route('dashboard.admin.users.index')->with('message', "Usuario '{$user->name}' ha sido creado");
   }
 
   public function destroy($id)
@@ -49,7 +49,7 @@ class UsersController extends Controller
     $user->is_active = false;
     $user->save();
 
-    return redirect()->route('dashboard.admin.users.index')->with('message', 'Usuario ha sido desactivado');
+    return redirect()->route('dashboard.admin.users.index')->with('message', "Usuario '{$user->name}' ha sido desactivado");
   }
 
   public function restore($id)
@@ -58,6 +58,6 @@ class UsersController extends Controller
     $user->is_active = true;
     $user->save();
 
-    return redirect()->route('dashboard.admin.users.index')->with('message', 'Usuario ha sido activado');
+    return redirect()->route('dashboard.admin.users.index')->with('message', "Usuario '{$user->name}' ha sido activado");
   }
 }
