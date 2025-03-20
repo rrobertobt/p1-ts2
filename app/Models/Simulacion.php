@@ -21,4 +21,9 @@ class Simulacion extends Model
     {
         return $this->belongsTo(Interseccion::class, 'id_interseccion');
     }
+
+    public function detalleSimulacion()
+    {
+        return $this->belongsToMany(DetalleSimulacion::class, 'id_simulacion');
+    }
 }

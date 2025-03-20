@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BloquesController;
 use App\Http\Controllers\InterseccionesController;
+use App\Http\Controllers\ReportesController;
 use App\Http\Controllers\SimulacionesController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -42,15 +43,18 @@ Route::middleware('auth')->group(function () {
   })->name('monitor.home');
 
   Route::get('/monitor/simulacion', [
-    SimulacionesController::class, 'simulacion'
+    SimulacionesController::class,
+    'simulacion'
   ])->name('dashboard.monitor.simulacion');
 
   Route::get('/monitor/simulacion/{id}', [
-    SimulacionesController::class, 'detalle'
+    SimulacionesController::class,
+    'detalle'
   ])->name('dashboard.monitor.simulacion.detail');
 
   Route::post('/monitor/simulacion', [
-    SimulacionesController::class, 'guardarSimulacion'
+    SimulacionesController::class,
+    'guardarSimulacion'
   ])->name('dashboard.monitor.simulacion.store');
 
 
@@ -60,4 +64,14 @@ Route::middleware('auth')->group(function () {
     return view('dashboard.supervisor.home');
   })->name('supervisor.home');
 
+  Route::get(
+    '/supervisor/reportes',
+    [ReportesController::class, 'index']
+
+  )->name('dashboard.supervisor.reports');
+  Route::get(
+    '/supervisor/reportes/usuario',
+    [ReportesController::class, 'userReports']
+
+  )->name('dashboard.supervisor.reports.user');
 });
