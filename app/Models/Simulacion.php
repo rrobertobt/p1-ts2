@@ -12,4 +12,13 @@ class Simulacion extends Model
 
     protected $table = 'simulacion';
 
+    public function usuario()
+    {
+        return $this->belongsTo(User::class, 'id_usuario');
+    }
+
+    public function interseccion()
+    {
+        return $this->belongsTo(Interseccion::class, 'id_interseccion');
+    }
 }

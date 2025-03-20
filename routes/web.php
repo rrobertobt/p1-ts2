@@ -45,6 +45,10 @@ Route::middleware('auth')->group(function () {
     SimulacionesController::class, 'simulacion'
   ])->name('dashboard.monitor.simulacion');
 
+  Route::get('/monitor/simulacion/{id}', [
+    SimulacionesController::class, 'detalle'
+  ])->name('dashboard.monitor.simulacion.detail');
+
   Route::post('/monitor/simulacion', [
     SimulacionesController::class, 'guardarSimulacion'
   ])->name('dashboard.monitor.simulacion.store');

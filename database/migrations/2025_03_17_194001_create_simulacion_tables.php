@@ -17,6 +17,8 @@ return new class extends Migration
       $table->dateTime('fecha_hora_fin')->nullable();
       $table->foreignId('id_usuario')->constrained('users');
       $table->foreignId('id_interseccion')->constrained('interseccion');
+      $table->string('modalidad');
+      $table->string('estado');
       $table->integer('tiempo_vaciado')->nullable();
       $table->timestamps();
     });
@@ -61,9 +63,9 @@ return new class extends Migration
       $table->id();
       $table->foreignId('id_simulacion')->constrained('simulacion');
       $table->foreignId('id_bloque_interseccion')->constrained('bloque_interseccion');
-      $table->integer('tiempo_paso');
-      $table->integer('tiempo_precaucion');
-      $table->integer('tiempo_espera');
+      $table->integer('tiempo_paso')->nullable();
+      // $table->integer('tiempo_precaucion')->nullable();
+      $table->integer('tiempo_espera')->nullable();
       $table->timestamps();
     });
   }
