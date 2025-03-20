@@ -30,14 +30,14 @@
             {{ session('error') }}
         </div>
     @endif
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0  w-full">
+    <nav class="border-b border-gray-200  fixed top-0  w-full">
       <div class=" flex flex-wrap items-center justify-between py-4 px-8 max-w-screen-2xl mx-auto">
             <h2 class="text-xl font-semibold text-gray-900 dark:"> <x-lucide-route
                     class="text-rose-500 size-6 mb-1 mr-2 inline-block" />
                 Simulador - Monitor</h2>
             <div class="flex items-center md:order-2 space-x-3">
                 @auth
-                    <span class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200">
+                    <span class="text-gray-600 hover:text-gray-800">
                         <span class="text-gray-400 text-sm">Usuario:</span>
 
                         {{ Auth::user()->name }}</span>
@@ -46,7 +46,7 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit"
-                        class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 p-1.5 focus:ring-gray-300 dark:focus:ring-gray-600 group relative"
+                        class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 p-1.5 focus:ring-gray-300  group relative"
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                         data-dropdown-placement="bottom">
                         <x-lucide-user class="size-6 group-hover:opacity-0 text-white transition" />
@@ -58,14 +58,14 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
                     <li>
                         <a href="#"
                             class="hover:text-rose-500 transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3    md:bg-transparent  "
                             aria-current="page">Inicio</a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href={{ route('dashboard.monitor.simulacion') }}
                             class="hover:text-rose-500 transition hover:ring hover:ring-gray-300 rounded-md block py-2 px-3 text-gray-900 ">Simulación</a>
                     </li>
                 </ul>

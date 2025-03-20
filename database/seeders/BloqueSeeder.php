@@ -40,18 +40,22 @@ class BloqueSeeder extends Seeder
       [
         'id' => 1,
         'nombre' => 'Norte a Sur',
+        'alias' => 'ns',
       ],
       [
         'id' => 2,
         'nombre' => 'Sur a Norte',
+        'alias' => 'sn',
       ],
       [
         'id' => 3,
         'nombre' => 'Este a Oeste',
+        'alias' => 'eo',
       ],
       [
         'id' => 4,
         'nombre' => 'Oeste a Este',
+        'alias' => 'oe',
       ],
     ]);
 

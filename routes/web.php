@@ -40,9 +40,14 @@ Route::middleware('auth')->group(function () {
   Route::get('/monitor/home', function () {
     return view('dashboard.monitor.home');
   })->name('monitor.home');
+
   Route::get('/monitor/simulacion', [
     SimulacionesController::class, 'simulacion'
-  ])->name('monitor.simulacion');
+  ])->name('dashboard.monitor.simulacion');
+
+  Route::post('/monitor/simulacion', [
+    SimulacionesController::class, 'guardarSimulacion'
+  ])->name('dashboard.monitor.simulacion.store');
 
 
 
@@ -50,5 +55,5 @@ Route::middleware('auth')->group(function () {
   Route::get('/supervisor/home', function () {
     return view('dashboard.supervisor.home');
   })->name('supervisor.home');
-  
+
 });

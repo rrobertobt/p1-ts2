@@ -16,6 +16,7 @@ return new class extends Migration
     Schema::create('tipo_sentido', function (Blueprint $table) {
       $table->id();
       $table->string('nombre');
+      $table->string('alias');
       $table->timestamps();
     });
 

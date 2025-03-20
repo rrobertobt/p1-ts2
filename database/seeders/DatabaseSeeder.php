@@ -68,7 +68,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([
-            BloqueSeeder::class
+            BloqueSeeder::class,
+            SimulacionesSeeder::class,
         ]);
     }
 }
